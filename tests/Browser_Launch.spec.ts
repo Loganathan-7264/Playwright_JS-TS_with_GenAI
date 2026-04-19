@@ -1,8 +1,12 @@
-import { chromium, test } from "playwright/test";
+import test, { chromium } from "playwright/test";
 
-test('Open the website', async () => {
-    const browser = await chromium.launch({headless: false});
+
+test("Launch browser", async ()=>{
+    const browser = await chromium.launch({headless:false});
     const context = await browser.newContext();
-    const page = await browser.newPage();
-    await page.goto('https://www.linkedin.com/in/loganathan-p/');
-    });
+    const page = await context.newPage();
+    await page.goto("https://www.amazon.in/");
+    await page.pause();
+    await page.close();
+
+})
