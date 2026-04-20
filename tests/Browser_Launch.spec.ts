@@ -6,7 +6,7 @@ test("Launch browser", async ()=>{
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto("https://www.amazon.in/");
-    await page.pause();
+    // await page.pause();
     await page.close();
 
 })
