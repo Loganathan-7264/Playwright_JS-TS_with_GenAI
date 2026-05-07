@@ -3,8 +3,8 @@ import path from "path";
 
 test("TC004: Upload Profile Photo", async({page})=>{
     await page.goto("https://apps.theauto-mate.com/crm/login.php");
-    await page.getByRole("textbox",{name:'Username'}).fill("test.automate");
-    await page.getByRole("textbox",{name:'Password'}).fill("test@123");
+    await page.getByRole("textbox",{name:'Username'}).fill("");
+    await page.getByRole("textbox",{name:'Password'}).fill("");
     await page.getByRole("button",{name:'Sign In'}).click();
     
     await page.getByRole("link",{name:'Settings'}).click();
